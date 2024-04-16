@@ -1,0 +1,756 @@
+.home-container{
+  height: 100%;
+  width: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(240, 243, 248, 0.8) 0%,
+    rgba(221, 228, 240, 0.8) 100%
+  );
+  overflow-x: hidden;
+}
+
+/* Navbar code Starts here */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  position: fixed;
+  height: 50px;
+  padding: 20px 20px;
+  top: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  animation: slideIn 0.9s ease-in-out;
+}
+
+.navbar:hover {
+  filter: brightness(1.7);
+}
+
+.navbar .logo {
+  flex: 0 0 70%;
+  font-family: "Sixtyfour";
+  color: #000000;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.navbar .links {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding-right: 20px;
+  color: #333;
+}
+
+.navbar .links a {
+  font-family: "Kode Mono", monospace;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 0% 5%;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar .links a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar code ends here */
+
+/* Hero code Starts here */
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.hero-card {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  height: 400px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-card .hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-card .hero-text h1 {
+  font-size: 3rem;
+  font-family: "Kode Mono", monospace;
+  font-weight: 600;
+  color: #333;
+  padding-top: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.hero-card .hero-text p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #333;
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+
+.hero-card .hero-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background-size: cover;
+}
+
+.hero-card .hero-text button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(51, 51, 51, 0.5); /* Transparent black background */
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.hero-card .hero-text button a {
+  text-decoration: none;
+  font-family: "Kode Mono", monospace;
+  color: #342a2a;
+  cursor: pointer;
+
+}
+
+.hero-card .hero-text button:hover {
+  background-color: rgba(0, 226, 30, 0.5); /* Transparent black background on hover */
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-card .hero-image {
+    display: none;
+  }
+}
+
+/* Hero code ends here */
+
+/* Container-2 Features code starts here */
+.container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  height: 110vh;
+  background: black;
+  transition: ease-in 0.5s; /* Added transition property */
+}
+
+.container-2 h1 {
+  font-family: "Kode Mono", monospace;
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.container-2 .features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  transition: ease-in 0.5s; /* Added transition property */
+}
+
+.container-2 .features .card {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 30px;
+  transition: ease-in 0.5s; /* Added transition property */
+}
+
+.container-2 .features .card::before,
+.container-2 .features .card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  border-radius: 8px;
+  transition: ease-in 0.5s; /* Added transition property */
+}
+
+.container-2 .features .card::after {
+  left: 50%;
+  background: #fff;
+  filter: blur(30px);
+}
+
+.container-2 .features .card:hover:before,
+.container-2 .features .card:hover:after {
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+}
+
+.container-2 .features .card:nth-child(1):before,
+.container-2 .features .card:nth-child(1):after,
+.container-2 .features .card:nth-child(2):before,
+.container-2 .features .card:nth-child(2):after,
+.container-2 .features .card:nth-child(3):before,
+.container-2 .features .card:nth-child(3):after {
+  background: linear-gradient(315deg, #ffffff, #000000);
+}
+
+.container-2 .features .card span::before,
+.container-2 .features .card span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: ease-in 0.1s;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.container-2 .features .card:hover span::before,
+.container-2 .features .card:hover span::after {
+  top: -50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+@keyframes animate {
+  0%, 100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translate(-10px);
+  }
+}
+
+.container-2 .features .card .content {
+  position: relative;
+  left: 0;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  transform: 0.5s;
+  color: #fff;
+  transition: ease-in 0.5s;
+}
+
+.container-2 .features .card:hover .content {
+  left: -25px;
+  padding: 60px 40px;
+}
+
+.container-2 .features .card .content h2 {
+  font-family: "Kode Mono", monospace;
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.container-2 .features .card .content p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.container-2 .features .card .content a {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.container-2 .features .card .content a:hover {
+  background: #13e6b1;
+  border: 1px solid rgba(0, 232, 253, 0.4);
+  box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+}
+
+/* Container-2 Features code ends here */
+
+/* Timeline code starts here */
+.container-5{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110vh;
+  background: linear-gradient(
+    135deg,
+    rgba(240, 243, 248, 0.8) 0%,
+    rgba(221, 228, 240, 0.8) 100%
+  );
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin: 5% auto;
+}
+
+.timeline-heading h1{
+  font-family: "Kode Mono", monospace;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #000000;
+  text-align: flex-start;
+  margin-bottom: 20px;
+  margin-left: 100px;
+}
+
+.timeline__event {
+  background: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3),
+    0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.timeline__event__title {
+  font-family: "Kode Mono", monospace;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: 1.5px;
+}
+
+.timeline__event__content {
+  padding: 20px;
+}
+
+.timeline__event__date {
+  font-family: "Kode Mono", monospace;
+  color: #fff7fe;
+  font-size: 1.5rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.timeline__event__icon {
+  font-family: "Kode Mono", monospace;
+  border-radius: 8px 0 0 8px;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 40%;
+  font-size: 2rem;
+  color: #9251ac;
+  padding: 20px;
+}
+
+.timeline__event__icon i {
+  position: absolute;
+  top: 50%;
+  left: -65px;
+  font-size: 2.5rem;
+  transform: translateY(-50%);
+}
+
+.timeline__event__description {
+  flex-basis: 60%;
+}
+
+.timeline__event--type2 .timeline__event__date {
+  color: #ffffff;
+}
+
+.timeline__event--type2 .timeline__event__icon {
+  background: #000000;
+  color: #000000;
+}
+
+.timeline__event--type2 .timeline__event__title {
+  color: #000000;
+}
+
+.timeline__event--type2:before {
+  background: #070708;
+  border-color: #000000;
+}
+
+.timeline__event--type2:after {
+  background: #000000;
+}
+
+.timeline__event--type3 .timeline__event__date {
+  color: #ffffff;
+}
+
+.timeline__event--type3 .timeline__event__icon {
+  background: #000000;
+  color: #000000;
+}
+
+.timeline__event--type3 .timeline__event__title {
+  color: #000000;
+}
+
+.timeline__event--type3:before {
+  background: #000000;
+  border-color: #000000;
+}
+
+.timeline__event--type3:after {
+  background: #24b47e;
+}
+
+.timeline__event:last-child:after {
+  content: none;
+}
+
+@media (max-width: 786px) {
+  .timeline__event {
+    flex-direction: column;
+  }
+
+  .timeline__event__icon {
+    border-radius: 4px 4px 0 0;
+  }
+}
+
+/* Timeline code ends here */
+
+/* About code starts here */
+
+.container-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110vh;
+  width: 100%;
+  padding: 1rem;
+  background: black;
+  transition: ease-in 0.5s; /* Added transition property */
+}
+
+.about-heading h1 {
+  font-family: "Kode Mono", monospace;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.about-card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  margin: 1em;
+  background: rgba(255, 255, 255, 0.126);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.806);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(40px);
+}
+
+.about-card .about-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.about-card .about-content .about-img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.249);
+}
+
+.about-card .about-content .about-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-card .about-content .about-cardContent h3 {
+  color: #fff;
+  font-family: "Kode Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+.about-card .about-content .about-cardContent h3 span {
+  font-family: "Kode Mono", monospace;
+  font-size: 10px;
+  font-weight: 300;
+  text-transform: initial;
+}
+
+.about-card .about-social-icons {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card .about-social-icons li {
+  margin: 0 10px;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.about-card:hover .about-content {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.about-card:hover .about-social-icons li {
+  transform: translateY(0px);
+  opacity: 1;
+  list-style: none;
+}
+
+.about-card .about-social-icons li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+/* About code ends here */
+
+/* Contact code starts here */
+.container-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(240, 243, 248, 0.8) 0%,
+    rgba(221, 228, 240, 0.8) 100%
+  );
+}
+.contact-form {
+  position: relative;
+  width: 400px;
+  min-height: 250px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+  margin-top: 10rem ;
+  margin-bottom: 7rem;
+  padding: 1.5rem;
+  z-index: 10;
+  color: whitesmoke;
+}
+
+.form-title {
+  font-family: "Kode Mono", monospace;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-family: "Kode Mono", monospace;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: rgb(0, 0, 0);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  font-family: "Kode Mono", monospace;
+  resize: none;
+}
+
+.form-group textarea {
+  font-family: "Kode Mono", monospace;
+  height: 100px;
+}
+
+.btn {
+  background: none;
+  font-family: "Kode Mono", monospace;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  background-color: rgba(51, 51, 51, 0.5);
+  padding: 0.8rem 1.8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(0, 226, 30, 0.5);
+}
+
+.blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(180deg, #000000 0%, #ffffff 100%);
+  mix-blend-mode: color-dodge;
+  animation: move 25s infinite alternate;
+  transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
+  z-index: -1;
+}
+
+.blob:hover {
+  width: 450px;
+  height: 450px;
+  filter: blur(30px);
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.6), inset 100px 100px 0 0px #fa709a, inset 200px 200px 0 0px #784ba8, inset 300px 300px 0 0px #2b86c5;
+  background: linear-gradient(180deg, #000000 0%, #ffffff 100%);
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-350px) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translateX(350px) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap");
+
